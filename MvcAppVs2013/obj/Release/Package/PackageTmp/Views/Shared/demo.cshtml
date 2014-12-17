@@ -1,0 +1,17 @@
+﻿@using MvcAppVs2013.Extensions
+@{
+    Layout = null;
+    ViewBag.Title = "demo";
+}
+@Styles.Render("~/Content/css")
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/redmond/jquery-ui.css">
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+
+<h2>demo</h2>
+@Html.Datepicker("dtTest", "", DatepickerTypes.DisplayMonthAndYearMenus)
+
+@Html.ActionLink("Back to Home", "Index", "Home")
+
+

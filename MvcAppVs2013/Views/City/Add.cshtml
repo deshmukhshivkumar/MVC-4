@@ -1,0 +1,39 @@
+﻿<h2>Add</h2>
+<form method="post" action="/City/Add" >
+    @Html.AntiForgeryToken()
+    <div class="editor-label">
+        <label for="Name">Name</label>
+    </div>
+    <div class="editor-field">
+        <input class="text-box single-line" id="Name" name="Name" type="text" value="" />
+         <input class="text-box single-line" id="Name" name="state.Code" type="text" value="" />
+        <span class="field-validation-valid" data-valmsg-for="Name" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="editor-label">
+        <label for="Review">Review</label>
+    </div>
+    <div class="editor-field">
+        <input class="text-box single-line" data-val="true" data-val-number="The field Review must be a number." data-val-required="The Review field is required." id="Review" name="Review" type="text" value="" />
+        <span class="field-validation-valid" data-valmsg-for="Review" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="editor-label">
+        <label for="IsActive">IsActive</label>
+    </div>
+    <div class="editor-field">
+        <input class="check-box" data-val="true" data-val-required="The IsActive field is required." id="IsActive" name="IsActive" type="checkbox" value="true" /><input name="IsActive" type="hidden" value="false" />
+        <span class="field-validation-valid" data-valmsg-for="IsActive" data-valmsg-replace="true"></span>
+    </div>
+    <p>
+        <input type="submit" value="Create" />
+    </p>
+</form>
+
+<script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script src="/Scripts/jquery.validate.js"></script>
+<script src="/Scripts/jquery.validate.unobtrusive.js"></script>
+
+<div>
+    <a href="/City">Back to List</a>
+</div>

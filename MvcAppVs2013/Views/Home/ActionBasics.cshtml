@@ -1,0 +1,58 @@
+﻿@{
+    
+    ViewBag.Title = "Action Basics";
+}
+<script type="text/javascript">
+    $(function () {
+
+        $("#btnCotent").click(function () {
+            $.ajax({
+                type: 'GET',
+                url: "/Home/Content",
+                success: function (data) {
+                    $('#content').text(data);
+                }
+            });
+            
+            var url = '/Api/CityApi';
+            $.getJSON(url, function (data) {
+                console.log(data[0].Id + ' Name ' + data[0].Name);
+            });
+        });
+
+        $("#btnGetJson").click(function () {
+            $.ajax({
+                type: 'GET',
+                url: "/Home/JsomResult",
+                success: function (data) {
+                    $('#JsonData').text('Id : ' + data.Id + ' ,   Name : ' + data.Name);
+                }
+            });
+        });
+
+
+    });
+</script>
+
+<h2>What action can return </h2>
+<h4>1. Content </h4>
+<br />
+<div id="content"></div>
+<input type="button" id="btnCotent" value="Get Content" />
+
+
+<h4>2. Json </h4>
+<br />
+<div id="JsonData"></div>
+<input type="button" id="btnGetJson" value="Get Json" />
+
+
+<h4>3. File </h4>
+<br />
+@Html.ActionLink("Download CSS File", "GetStyleSheet", "Home", new { @target = "_blank" })
+
+
+<h4>4. Unauthorized Result </h4>
+<br />
+@Html.ActionLink("You are not authorized.", "UnauthorizedResult", "Home")
+

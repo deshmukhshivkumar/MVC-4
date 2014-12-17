@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="Test" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^G:\\Office\\MVC\ Hands\ On\\Hands\ on\\MVC\ 4\\MvcAppVs2013\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^G:\\Office\\MVC\ Hands\ On\\Hands\ on\\MVC\ 4\\MvcAppVs2013\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\v11.0;Initial Catalog=aspnet-MvcAppVs2013-20131116162552;Integrated Security=SSPI;AttachDBFilename=|DataDirectory|\aspnet-MvcAppVs2013-20131116162552.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="G:\\Office\\MVC\ Hands\ On\\Hands\ on\\MVC\ 4\\MvcAppVs2013\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+  <parameter name="MvcAppContext-Web.config Connection String" description="" value="Data Source=(localdb)\v11.0; Initial Catalog=MvcAppContext-20131121215354; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|MvcAppContext-20131121215354.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="G:\\Office\\MVC\ Hands\ On\\Hands\ on\\MVC\ 4\\MvcAppVs2013\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MvcAppContext']/@connectionString" />
+  </parameter>
+  <parameter name="MvcAppVs2013Context-Web.config Connection String" description="" value="Data Source=(localdb)\v11.0; Initial Catalog=MvcAppVs2013Context-20131116164555; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|MvcAppVs2013Context-20131116164555.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="G:\\Office\\MVC\ Hands\ On\\Hands\ on\\MVC\ 4\\MvcAppVs2013\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='MvcAppVs2013Context']/@connectionString" />
+  </parameter>
+</parameters>
